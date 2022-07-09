@@ -1,0 +1,29 @@
+{
+  "name": "sentry",
+  "version": "0.1",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "ts-node src/app.ts",
+    "launch": "ts-node src/app.ts",
+    "data": "ts-node src/data.ts",
+    "lint": "eslint .",
+    "popup": "ts-node src/popup.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.4.1",
+    "@solana/web3.js": "^1.43.2",
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1",
+    "google-spreadsheet": "^3.3.0",
+    "i18next": "^21.8.3",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/google-spreadsheet": "^3.2.2"
+  }
+}

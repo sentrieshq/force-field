@@ -94,9 +94,13 @@ const buildSystem = async() => {
     console.log(category_channels)
     
     for(let categoryId of category_channels) {
-        const category = await client.channels.fetch(categoryId) as CategoryChannel
-        for(let channel__ of category.children){
-            channels.push(channel__[0].toString())
+        try {
+            const category = await client.channels.fetch(categoryId) as CategoryChannel
+            for(let channel__ of category.children){
+                channels.push(channel__[0].toString())
+            }
+        } catch (err) {
+            console.error(`Channel not found: ${err}`)
         }
     }
     console.log('Our channels')
